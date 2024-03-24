@@ -140,3 +140,35 @@ function validateForm() {
 
     return isValid;
 }
+// script.js
+var imgs = document.querySelectorAll('.slider img');
+var dots = document.querySelectorAll('.dot');
+var currentImg = 0;
+const interval = 3000;
+
+function changeSlide(n) {
+ for (var i = 0; i < imgs.length; i++) {
+    imgs[i].style.opacity = 0;
+    dots[i].className = dots[i].className.replace(' active', '');
+ }
+
+ currentImg = n;
+
+ imgs[currentImg].style.opacity = 1;
+ dots[currentImg].className += ' active';
+}
+
+var timer = setInterval(function() {
+ changeSlide((currentImg + 1) % imgs.length);
+}, interval);
+
+dots.forEach(function(dot, index) {
+ dot.addEventListener('click', function() {
+    clearInterval(timer);
+    changeSlide(index);
+    timer = setInterval(function() {
+      changeSlide((currentImg + 1) % imgs.length);
+    }, interval);
+ });
+});
+
