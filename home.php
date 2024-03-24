@@ -25,6 +25,7 @@
 		$username = $_SESSION['username'];
 		echo "Welcome $username";
 	?>
+    <a href="logout.php">Logout</a>
     <div class="slider">
         <img src="img1.jpg" alt="Image 1">
         <img src="image2.jpg" alt="Image 2">
