@@ -17,7 +17,7 @@
 <body>
     <nav>
         <a href="home.html">Home</a> 
-        <a href="events.html">Events</a>
+        <a href="events.php">Events</a>
         <a href="register.html">Sign Up</a>
     </nav>
     <?php

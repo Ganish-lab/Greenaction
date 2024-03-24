@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="stylesheet" href="styles.css">
     <title>Post an Event</title>
 </head>
 <body>
+<nav>
+        <a href="home.html">Home</a> 
+        <a href="events.php">Events</a>
+        <a href="register.html">Sign Up</a>
+    </nav>
     <h1>Post an Event</h1>
     <form action="post_event.php" method="post">
         <label for="eventName">Event Name:</label>
