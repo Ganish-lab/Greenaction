@@ -1,14 +1,24 @@
 <?php
+// Ensure that the user has logged in before accessing this page
 include "connect.php";
+session_start();
+if (!isset($_SESSION['username'],$_SESSION['id'])) {
+    header("location:login.html");
+
+}
 if ($_SERVER['REQUEST_METHOD']=='POST') {
-    $event_id = $_POST['event_id'];
-    $volunteer_id = $_SESSION['id']; //volunteers are also users
+    // Assuming event_id is an integer
+    $event_id = intval($_POST['event_id']);
+    $volunteer_id = $_SESSION['id']; // Volunteers are also users
+    // Ensure event_id and volunteer_id are correctly formatted for the SQL query
     $sql = "INSERT INTO volunteers(event_id, volunteer_id) VALUES($event_id, $volunteer_id)";
     $result = mysqli_query($connect, $sql);
     if ($result) {
         echo "You have successfully registered for the event.";
-    } else{
-        die(mysqli_error($connect));
+    } else {
+        // Display a detailed error message
+        die("Error: " . mysqli_error($connect));
     }
 }
+
 ?>
