@@ -18,7 +18,7 @@
         //execute query
         $result = mysqli_query($connect, $sql);
         if ($result) {
-            echo "registration successful";
+            header("location:login.html");
         } else {
-            die(mysql_error($connect));
+            die(mysqli_error($connect));
         }

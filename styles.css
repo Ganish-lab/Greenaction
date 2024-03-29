@@ -90,3 +90,34 @@ nav a {
     text-decoration: none;
     margin: 0 10px;
 }  
+.profile-pic-container {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.upload-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    cursor: pointer;
+}
+
+.upload-overlay input[type="file"] {
+    display: none;
+}

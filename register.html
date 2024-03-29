@@ -1,62 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles2.css">
 </head>
 <body>
-    <form action="register.php" method="post" onsubmit="return validateForm()">
-        <div>
-            <label for="fullname">Full Name:</label>
-            <input type="text" id="fullname" name="fullname" placeholder="Enter your fullname">
-            <span id="fullnameError" style="color: red;"></span>
-        </div>
-        <div>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email">
-            <span id="emailError" style="color: red;"></span>
-        </div>
-        <div>
-            <label for="dob">Date of Birth:</label>
-            <input type="date" id="dob" name="dob">
-            <span id="dobError" style="color: red;"></span>
-        </div>
-        <div>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" placeholder="Enter your username">
-            <span id="usernameError" style="color: red;"></span>
-        </div>
-        <div>
-            <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
-            <span id="phoneError" style="color: red;"></span>
-        </div>
-        <div>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" placeholder="Enter your password">
-            <span id="passwordError" style="color: red;"></span>
-        </div> 
-        <div>
-            <label for="confirm_password">Confirm Password:</label>
-            <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm your password">
-            <span id="confirmPasswordError" style="color: red;"></span>
-        </div>
-        <div>
-            <label for="user_account">User Account:</label>
-            <select id="user_account" name="user_account">
-                <option value="" disabled selected>Select user account</option>
-                <option value="volunteer">volunteer</option>
-                <option value="other_stakeholder">other_stakeholder</option>
-            </select>
-        </div>
-        
-         <div>
-            <input type="submit" value="Sign Up">
-        </div>
-    </form>
+    <div class="container mt-5">
+        <form action="register.php" method="post" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="fullname">Full Name:</label>
+                <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Enter your fullname">
+                <span id="fullnameError" style="color: red;"></span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+                <span id="emailError" style="color: red;"></span>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" class="form-control" id="dob" name="dob">
+                <span id="dobError" style="color: red;"></span>
+            </div>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username">
+                <span id="usernameError" style="color: red;"></span>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number">
+                <span id="phoneError" style="color: red;"></span>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password">
+                <span id="passwordError" style="color: red;"></span>
+            </div> 
+            <div class="form-group">
+                <label for="confirm_password">Confirm Password:</label>
+                <input type="password" class="form-control" id="confirm_password" name="confirm_password" placeholder="Confirm your password">
+                <span id="confirmPasswordError" style="color: red;"></span>
+            </div>
+            <div class="form-group">
+                <label for="user_account">User Account:</label>
+                <select class="form-control" id="user_account" name="user_account">
+                    <option value="" disabled selected>Select user account</option>
+                    <option value="volunteer">volunteer</option>
+                    <option value="stakeholder">stakeholder</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Sign Up">
+            </div>
+        </form>
+    </div>
     <script src="script.js"></script>
-    
 </body>
 </html>

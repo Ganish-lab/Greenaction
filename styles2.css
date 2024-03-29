@@ -1,0 +1,192 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("General-Banner.jpg");
+}
+#pazzo {
+    background-color: #F4F4F4;
+    list-style-type: none;
+    padding: 18px 10px;
+    overflow: hidden;
+    text-align: center;
+}
+
+li a{
+    text-decoration: none;
+    color: white;
+    padding: 8px 15px;
+}
+li a{
+    color:#16be42 ;
+    background-color: #A4DDED;
+}
+li a:hover{
+    color: #16be42;
+    background-color: black;
+}
+/*background-color*/
+#pazzo {
+    background-color: #A4DDED;
+    list-style-type: none;
+    padding: 25px 30px;
+}
+/*color change*/
+li a{
+    text-decoration: none;
+    color: black;
+    padding: 9px 15px;
+}
+li a:hover {
+    color: #16be42;
+    background-color: white;
+}
+/*align links*/
+#pazzo li{
+    display: inline;
+
+}
+
+h2 { 
+   text-align: center;
+ }
+
+.container {
+    max-width: 300px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: grid;
+    gap: 3px;
+}
+
+label {
+    font-weight: normal;
+    font-size: 14px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+span {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+* {
+    box-sizing: border-box;
+}
+
+#boxes {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+#boxes span {
+    flex: 1;
+    text-align: center;
+}
+#boxes {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px;
+    text-align: left;
+}
+
+#boxes span {
+    font-size: 15px;
+    flex-basis: 23%;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+#boxes h2 {
+    font-size: 18px;
+    color: #333;
+}
+
+#boxes strong {
+    color: #e44d26; 
+}
+
+
+@media (max-width: 768px) {
+    #boxes span {
+        flex-basis: 100%;
+    }
+}
+
+
+    ul#pazzo li a.active {
+        background-color: #F0F8FF;
+        color: #B9D9EB;
+    }
+
+#locations{
+    font-size: 15px;
+    background-color: black;
+    display: block;
+    padding: 20px;
+    width: 30%;
+    
+    float: left;
+}
+#flex {
+
+    
+    text-align: right;
+    float: right;
+    height: 20px;
+    width: 15%;
+    padding: 0 10px;
+}
+#contactus {
+    height: 50%;
+    display: block;
+    padding: 20px;
+    font-size: 15px;
+    text-align: center;
+    float: right;
+    background-color: black;
+    width: 70%;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1px;
+    position: fixed;
+    font-size: 12px;
+    bottom: 0;
+    width: 100%;
+}

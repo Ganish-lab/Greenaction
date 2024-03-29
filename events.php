@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles2.css">
     <title>Post an Event</title>
 </head>
 <body>
 <nav>
-        <a href="home.html">Home</a> 
+        <a href="home.php">Home</a> 
         <a href="events.php">Events</a>
         <a href="register.html">Sign Up</a>
     </nav>

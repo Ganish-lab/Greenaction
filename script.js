@@ -171,4 +171,10 @@ dots.forEach(function(dot, index) {
     }, interval);
  });
 });
+document.getElementById('profile_picture_input').addEventListener('change', function() {
+});
+
+document.querySelector('.upload-overlay').addEventListener('click', function() {
+    document.getElementById('profile_picture_input').click();
+});
 

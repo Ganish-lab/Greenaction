@@ -1,11 +1,4 @@
-<?php
-	//ensure that the user has logged in before accessing this page
-	session_start();
-	if (!isset($_SESSION['username'],$_SESSION['id'])) {
-		header("location:login.html");
-	}
 
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,14 +12,9 @@
         <a href="home.html">Home</a> 
         <a href="events.php">Events</a>
         <a href="register.html">Sign Up</a>
+    
     </nav>
-    <?php
-		//session_start();
-		$username = $_SESSION['username'];
-		echo "Welcome $username";
-	?>
-    <a href="logout.php">Logout</a>
-    <div class="slider">
+<div class="slider">
         <img src="img1.jpg" alt="Image 1">
         <img src="image2.jpg" alt="Image 2">
         <img src="image3.jpg" alt="Image 3">
