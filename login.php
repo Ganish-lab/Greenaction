@@ -48,15 +48,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION["id"] = $id;
                 $_SESSION["username"] = $username;
 
-                // Redirect user to welcome page
+                // Redirect user to profile page
                 header("location: home.php");
             } else {
                 // Password is not valid, display a generic error message
                 $login_err = "Invalid username or password.";
+                echo "<script>alert('invalid username or password');</script>";
             }
         } else {
             // Username doesn't exist, display a generic error message
             $login_err = "Invalid username or password.";
+            echo "<script>alert('invalid username or password');</script>";
         }
     }
 
