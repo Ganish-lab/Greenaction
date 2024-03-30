@@ -16,11 +16,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $volunteer_id = mysqli_real_escape_string($connect, $volunteer_id);
     $event_id = mysqli_real_escape_string($connect, $event_id);
 
-    // Check if event_id exists in events table
-    $check_event_sql = "SELECT event_id FROM events WHERE event_id = '$event_id'";
-    $check_event_result = mysqli_query($connect, $check_event_sql);
+    // Check if the volunteer has already registered for the event
+    $check_duplicate_sql = "SELECT * FROM volunteers WHERE volunteer_id = '$volunteer_id' AND event_id = '$event_id'";
+    $check_duplicate_result = mysqli_query($connect, $check_duplicate_sql);
 
-    if (mysqli_num_rows($check_event_result) > 0) {
+    if (mysqli_num_rows($check_duplicate_result) > 0) {
+        // Volunteer has already registered for the event
+        echo "You have already registered for this event.";
+    } else {
+        // Proceed with registration
         // Construct SQL query
         $sql = "INSERT INTO volunteers (volunteer_id, event_id) VALUES ('$volunteer_id', '$event_id')";
 
@@ -29,12 +33,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         // Check for errors
         if ($result) {
-            echo "You have successfully registered for the event.";
+            // After successful registration
+            echo "Registration successful!";
         } else {
+            // Error occurred during registration
             echo "Error: " . mysqli_error($connect);
         }
-    } else {
-        echo "Error: Event does not exist.";
     }
+} else {
+    echo "Error: Invalid request method.";
 }
 ?>
