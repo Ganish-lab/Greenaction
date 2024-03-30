@@ -25,16 +25,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "You have already registered for this event.";
     } else {
         // Proceed with registration
-        // Construct SQL query
         $sql = "INSERT INTO volunteers (volunteer_id, event_id) VALUES ('$volunteer_id', '$event_id')";
-
-        // Execute query
         $result = mysqli_query($connect, $sql);
 
-        // Check for errors
         if ($result) {
             // After successful registration
-            echo "Registration successful!";
+            echo "<h2>Provide Feedback</h2>";
+            echo "<form action='feedback.php' method='post'>";
+            echo "<input type='hidden' name='event_id' value='$event_id'>";
+            echo "<label for='feedback_content'>Feedback:</label><br>";
+            echo "<textarea name='feedback_content' id='feedback_content' rows='4' cols='50' required></textarea><br><br>";
+            echo "<input type='submit' value='Submit Feedback'>";
+            echo "</form>";
         } else {
             // Error occurred during registration
             echo "Error: " . mysqli_error($connect);
