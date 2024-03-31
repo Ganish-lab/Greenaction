@@ -1,0 +1,11 @@
+nav {
+    background-color: #333; /* Dark background for navigation */
+    padding: 10px;
+    overflow: hidden;
+}
+
+nav a {
+    color: #ffffff; /* White text for navigation links */
+    text-decoration: none;
+    margin: 0 10px;
+} 

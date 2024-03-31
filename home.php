@@ -9,9 +9,14 @@
 </head>
 <body>
     <nav>
-        <a href="home.html">Home</a> 
+        <a href="home.php">Home</a> 
         <a href="events.php">Events</a>
         <a href="register.html">Sign Up</a>
+        <a href="login.html">Login</a>
+        <a href="profile.php">Profile</a>
+        <a href="adminlogin.html">Admin</a>
+        <a href="logout.php">Logout</a>
+
     
     </nav>
 <div class="slider">
@@ -27,7 +32,7 @@
     <footer>
         <div class="footer-section">
             <h2>About</h2>
-            <p>Our platform serves as a catalyst for community-driven environmental stewardship, facilitating meaningful engagement between volunteers, stakeholders, and administrators. At our core, we believe in the power of collective action to address environmental challenges and create cleaner, healthier communities for all.</p>
+            <p>Our platform serves as a catalyst for community-driven environmental stewardship, facilitating meaningful engagement between volunteers, and stakeholders. At our core, we believe in the power of collective action to address environmental challenges and create cleaner, healthier communities for all.</p>
         </div>
         <div class="footer-section">
             <h2>Mission</h2>
