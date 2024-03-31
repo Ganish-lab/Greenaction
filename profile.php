@@ -4,7 +4,7 @@ session_start();
 
 // Check if user is logged in, if not redirect to login page
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-    header("location: login.php");
+    header("location: login.html");
     exit;
 }
 
@@ -99,8 +99,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <style>
         .profile-picture-container {
-            width: 150px;
-            height: 150px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
             overflow: hidden;
             margin: 0 auto;
@@ -113,6 +113,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     </style>
 </head>
 <body>
+<nav>
+        <a href="home.php">Home</a> 
+        <a href="events.php">Events</a>
+        <a href="profile.php">Profile</a>
+        <a href="login.html">Admin</a>
+        <a href="logout.php">Logout</a>
+    </nav>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-6">

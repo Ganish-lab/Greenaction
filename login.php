@@ -47,9 +47,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION["loggedin"] = true;
                 $_SESSION["id"] = $id;
                 $_SESSION["username"] = $username;
+// Redirect user to profile page or dashboard based on username
+if ($_SESSION["username"] === "admin") {
+    header("location: dashboard.php");
+} else {
+    header("location: profile.php");
+}
 
-                // Redirect user to profile page
-                header("location: home.php");
             } else {
                 // Password is not valid, display a generic error message
                 $login_err = "Invalid username or password.";

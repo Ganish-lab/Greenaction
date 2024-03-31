@@ -12,41 +12,18 @@ body {
     overflow: hidden;
     text-align: center;
 }
+nav {
+    background-color: #333; /* Dark background for navigation */
+    padding: 10px;
+    overflow: hidden;
+}
 
-li a{
+nav a {
+    color: #ffffff; /* White text for navigation links */
     text-decoration: none;
-    color: white;
-    padding: 8px 15px;
-}
-li a{
-    color:#16be42 ;
-    background-color: #A4DDED;
-}
-li a:hover{
-    color: #16be42;
-    background-color: black;
-}
-/*background-color*/
-#pazzo {
-    background-color: #A4DDED;
-    list-style-type: none;
-    padding: 25px 30px;
-}
-/*color change*/
-li a{
-    text-decoration: none;
-    color: black;
-    padding: 9px 15px;
-}
-li a:hover {
-    color: #16be42;
-    background-color: white;
-}
-/*align links*/
-#pazzo li{
-    display: inline;
+    margin: 0 10px;
+} 
 
-}
 
 h2 { 
    text-align: center;
@@ -146,10 +123,7 @@ input[type="submit"]:hover {
 }
 
 
-    ul#pazzo li a.active {
-        background-color: #F0F8FF;
-        color: #B9D9EB;
-    }
+   
 
 #locations{
     font-size: 15px;

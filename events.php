@@ -1,25 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<style>
-    .navbar-nav .nav-link {
-        color: black !important;
-    }
-</style>
+<link rel="stylesheet" href="styles5.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <title>Post an Event</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="home.php">Home</a>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="events.php">Events</a></li>
-            <li class="nav-item"><a class="nav-link" href="register.html">Sign Up</a></li>
-        </ul>
-    </div>
-</nav>
+<nav>
+        <a href="home.php">Home</a> 
+        <a href="events.php">Events</a>
+        <a href="profile.php">Profile</a>
+        <a href="logout.php">Logout</a>
+    </nav>
 <h1 class="text-center my-4">Post an Event</h1>
+<div class="container mt-5">
 <form action="post_event.php" method="post">
     <div class="form-group">
         <label for="eventName">Event Name:</label>
@@ -43,6 +37,7 @@
     </div>
     <input type="submit" class="btn btn-primary" value="Post Event">
 </form>
+</div>
 <h1 class="text-center my-4">Events List</h1>
 <div class="container">
     <?php

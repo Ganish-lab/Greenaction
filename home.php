@@ -14,11 +14,8 @@
         <a href="register.html">Sign Up</a>
         <a href="login.html">Login</a>
         <a href="profile.php">Profile</a>
-        <a href="adminlogin.html">Admin</a>
-        <a href="logout.php">Logout</a>
-
-    
-    </nav>
+        <a href="login.html">Admin</a>
+        <a href="logout.php">Logout</a></nav>
 <div class="slider">
         <img src="img1.jpg" alt="Image 1">
         <img src="image2.jpg" alt="Image 2">
