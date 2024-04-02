@@ -12,13 +12,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $user_id = trim($_POST["user_id"]);
 
-        // Prepare SQL statement
-        $sql = "DELETE FROM users WHERE id = $user_id";
-
-        if ($connect->query($sql) === TRUE) {
-            echo "User with ID $user_id has been removed successfully";
+        // Delete associated records from feedback table
+        $sql_delete_feedback = "DELETE FROM feedback WHERE volunteer_id = $user_id";
+        if ($connect->query($sql_delete_feedback) === TRUE) {
+            // Delete associated records from volunteers table
+            $sql_delete_volunteers = "DELETE FROM volunteers WHERE volunteer_id = $user_id";
+            if ($connect->query($sql_delete_volunteers) === TRUE) {
+                // Delete associated records from events table
+                $sql_delete_events = "DELETE FROM events WHERE user_id = $user_id";
+                if ($connect->query($sql_delete_events) === TRUE) {
+                    // Finally, delete record from users table
+                    $sql_delete_users = "DELETE FROM users WHERE id = $user_id";
+                    if ($connect->query($sql_delete_users) === TRUE) {
+                        echo "User with ID $user_id has been removed successfully";
+                    } else {
+                        echo "Error removing user: " . $connect->error;
+                    }
+                } else {
+                    echo "Error removing events: " . $connect->error;
+                }
+            } else {
+                echo "Error removing volunteers: " . $connect->error;
+            }
         } else {
-            echo "Error removing user: " . $connect->error;
+            echo "Error removing feedback: " . $connect->error;
         }
 
         // Close the connection
