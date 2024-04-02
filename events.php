@@ -10,7 +10,6 @@
         <a href="home.php">Home</a> 
         <a href="events.php">Events</a>
         <a href="profile.php">Profile</a>
-        <a href="logout.php">Logout</a>
     </nav>
 <h1 class="text-center my-4">Post an Event</h1>
 <div class="container mt-5">

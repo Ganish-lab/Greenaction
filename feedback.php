@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $result = mysqli_query($connect, $sql);
 
     if ($result) {
-        echo "Feedback submitted successfully!";
+        header("location: events.php");
     } else {
         echo "Error: " . mysqli_error($connect);
     }
